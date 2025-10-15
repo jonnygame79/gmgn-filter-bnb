@@ -26,5 +26,11 @@
     "action": {
         "default_popup": "popup.html",
         "default_title": "GMGN Filter"
+    },
+    "icons": {
+      "16": "gmgn-filter-bnb.png",
+      "32": "gmgn-filter-bnb.png",
+      "48": "gmgn-filter-bnb.png",
+      "128": "gmgn-filter-bnb.png"
     }
 }
