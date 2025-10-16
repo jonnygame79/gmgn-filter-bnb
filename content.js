@@ -688,6 +688,14 @@
                 let first_buy_mc = lastTx.price_usd * lastTx.token.total_supply / 1000;
                 // console.log("Last tx info:", lastTx)
                 let first_buy_amount = Number(lastTx.quote_amount);
+                if (lastTx.quote_token.name == "Tether USD") {
+                    first_buy_amount = first_buy_amount / 1200
+                } else if (lastTx.quote_token.name == "World Liberty Financial USD") {
+                    first_buy_amount = first_buy_amount / 1200
+                } else if (lastTx.quote_token.name == "Aster") {
+                    first_buy_amount = first_buy_amount / 1.3
+                }
+
                 let token_amount_left = 0;
                 let first_buy_token_amount = 0
                 for (let i = txs.length - 1; i >= 0; i--) {
