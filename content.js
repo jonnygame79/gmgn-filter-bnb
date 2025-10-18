@@ -1311,7 +1311,7 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
         } else if (hours > 0) {
             return `${hours}h ${minutes}m`;
         } else if (ageInSeconds > 60) {
-            return `${minutes}m`;
+            return `${minutes}m ${ageInSeconds % 60}s`;
         } else return `${ageInSeconds}s`
     }
 
