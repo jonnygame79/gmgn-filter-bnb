@@ -880,6 +880,7 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
                         platform = "cpmm"
                     if (launchpad_project == 'heaven') platform = "heaven-swap"
                     if (launchpad_project = 'fourmeme') platform = "pancake"
+                    if (launchpad_project = 'flap') platform = "pancake"
                 }
 
 
@@ -1096,6 +1097,9 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
                         </label>
                         <div class="gmgn-filter-checkboxes">
                             <label><input launchpad type="checkbox" value="fourmeme">Four.meme</label>                            
+                        </div>
+                        <div class="gmgn-filter-checkboxes">
+                            <label><input launchpad type="checkbox" value="flap">Flap</label>                            
                         </div>
                         <div class="gmgn-filter-checkboxes">
                             <label><input launchpad type="checkbox" value="pancake">PancakeSwap</label>                            
