@@ -45,9 +45,6 @@
         x_search: '<svg width="14px" height="14px" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-text-200"><path d="M9.28947 0.829834H11.0436L7.21136 5.20982L11.7197 11.17H8.1897L5.4249 7.55518L2.26134 11.17H0.506166L4.60511 6.48511L0.280273 0.829834H3.89986L6.399 4.13391L9.28947 0.829834ZM8.67383 10.1201H9.64581L3.37172 1.82461H2.32869L8.67383 10.1201Z"></path></svg>',
         x_profile: '<svg width="14px" height="14px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-100 group-hover:text-text-100"><path d="M7.18994 9.37073C4.57067 9.37073 2.43132 11.4269 2.29932 14.0133H13.4321C13.3001 11.4269 11.1607 9.37081 8.5415 9.37073H7.18994ZM14.7378 14.2672C14.7377 14.8449 14.2696 15.3131 13.6919 15.3131H2.03955C1.46182 15.3131.992781 14.8449.992676 14.2672.992676 10.8449 3.76761 8.06995 7.18994 8.06995H8.5415C11.9638 8.07003 14.7378 10.8449 14.7378 14.2672ZM10.0044 3.88647C10.0042 2.77949 9.10655 1.88257 7.99951 1.88257 6.89267 1.8828 5.99584 2.77963 5.99561 3.88647 5.99561 4.99351 6.89253 5.89113 7.99951 5.89136 9.10669 5.89136 10.0044 4.99365 10.0044 3.88647ZM11.3042 3.88647C11.3042 5.71162 9.82466 7.19116 7.99951 7.19116 6.17456 7.19093 4.69482 5.71148 4.69482 3.88647 4.69506 2.06166 6.1747.582018 7.99951.581787 9.82452.581787 11.304 2.06152 11.3042 3.88647Z"></path></svg>',
         tiktok: '<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" size="14"><path d="M11.4514 5.77534C12.515 6.53984 13.7922 6.95033 15.102 6.94867V4.31867C14.844 4.31867 14.5874 4.29201 14.3354 4.23801V6.30734C13.0254 6.30929 11.7479 5.89903 10.684 5.13467V10.5C10.684 13.184 8.51605 15.3593 5.84205 15.3593C4.88166 15.3607 3.94287 15.0744 3.14672 14.5373C3.59637 15.0006 4.13453 15.3688 4.72924 15.6201C5.32396 15.8713 5.9631 16.0005 6.60872 16C9.28271 16 11.4514 13.8247 11.4514 11.14V5.776V5.77534ZM12.3967 3.12334C11.8555 2.53082 11.5235 1.77724 11.4514 0.978013V0.640013H10.7247C10.8139 1.14798 11.0088 1.63155 11.2968 2.05935C11.5849 2.48716 11.9596 2.84965 12.3967 3.12334ZM4.83805 12.4787C4.54401 12.0916 4.38521 11.6187 4.38605 11.1327C4.38559 10.7838 4.46738 10.4398 4.62478 10.1286C4.78218 9.81727 5.01076 9.54748 5.29196 9.34109C5.57317 9.13471 5.89907 8.99753 6.24322 8.94069C6.58738 8.88386 6.94008 8.90897 7.27271 9.014V6.32667C7.01895 6.29165 6.76283 6.27671 6.50672 6.282V8.374C6.17409 8.26898 5.82138 8.24386 5.47723 8.3007C5.13307 8.35753 4.80717 8.49471 4.52596 8.7011C4.24476 8.90748 4.01618 9.17727 3.85878 9.48855C3.70138 9.79984 3.61959 10.1438 3.62005 10.4927C3.62005 11.3607 4.11539 12.1127 4.83805 12.4787Z" fill="#FF004F"></path><path d="M10.6841 5.13534C11.748 5.89965 13.0254 6.30991 14.3354 6.308V4.23867C13.5887 4.07817 12.9109 3.68819 12.3968 3.12334C11.9597 2.84962 11.585 2.48711 11.2969 2.05931C11.0089 1.63152 10.814 1.14797 10.7248 0.640013H8.8161V11.14C8.81522 11.7272 8.58165 12.2901 8.16654 12.7055C7.75144 13.1208 7.18865 13.3548 6.60143 13.356C6.25968 13.3561 5.92257 13.2769 5.6166 13.1247C5.31063 12.9725 5.04414 12.7513 4.8381 12.4787C4.47113 12.2928 4.16292 12.0087 3.94777 11.6581C3.73262 11.3075 3.61896 10.904 3.61944 10.4927C3.61898 10.1438 3.70076 9.79984 3.85816 9.48855C4.01557 9.17727 4.24414 8.90748 4.52535 8.7011C4.80655 8.49471 5.13246 8.35753 5.47661 8.3007C5.82077 8.24386 6.17347 8.26898 6.5061 8.374V6.282C3.87944 6.33667 1.76611 8.49066 1.76611 11.1407C1.76611 12.4633 2.29278 13.662 3.14677 14.538C3.94292 15.0751 4.88172 15.3614 5.8421 15.36C8.51676 15.36 10.6841 13.184 10.6841 10.5V5.13601V5.13534Z" fill="white"></path><path d="M14.3353 4.23866V3.67866C13.6497 3.67983 12.9777 3.48733 12.3966 3.12333C12.9106 3.68839 13.5885 4.0784 14.3353 4.23866ZM10.7246 0.639999C10.7072 0.539917 10.6939 0.439167 10.6846 0.337999V0H8.04932V10.5C8.04862 11.0873 7.8151 11.6503 7.39996 12.0657C6.98482 12.4811 6.42193 12.7149 5.83466 12.716C5.48839 12.7164 5.1469 12.6351 4.83799 12.4786C5.04403 12.7513 5.31052 12.9724 5.61649 13.1247C5.92246 13.2769 6.25957 13.3561 6.60132 13.356C7.18843 13.3547 7.75112 13.1209 8.1662 12.7057C8.58128 12.2905 8.81493 11.7277 8.81599 11.1406V0.639999H10.7246ZM6.50666 6.28199V5.68666C6.28662 5.65643 6.06477 5.64128 5.84266 5.64132C3.168 5.64132 1 7.81665 1 10.5006C0.999076 11.2981 1.19441 12.0835 1.56878 12.7876C1.94315 13.4917 2.48505 14.0928 3.14666 14.538C2.25998 13.6296 1.76456 12.41 1.76667 11.1406C1.76667 8.49132 3.88 6.33665 6.50666 6.28199Z" fill="#00F2EA"></path></svg>',
-
-
-
     }
 
     // Platform image mapping
@@ -62,7 +59,8 @@
         'jup_studio': 'https://jup.ag/favicon.ico',
         'bags': 'https://bags.fm/favicon.ico',
         'heaven': 'https://axiom.trade/images/heaven.svg',
-        'fourmeme': 'https://four.meme/_next/static/media/logo.fd63b04b.svg'
+        'fourmeme': 'https://four.meme/_next/static/media/logo.fd63b04b.svg',
+        'flap': 'https://bnb.flap.sh/_next/image?url=%2Flogo.png&w=640&q=75'
     };
 
     // Wait for the page to load
@@ -578,7 +576,6 @@
             tokenAgeDiv.className = 'token-age-display';
 
             const ageInSeconds = info.first_tx_time - info.created_block_time;
-            console.log("Age:", tokenAddress, ageInSeconds, info.created_block_time)
             const isSnipe = ageInSeconds >= 0 && ageInSeconds <= 3 && !info.dev;
 
             if (info.dev == false) {
@@ -679,14 +676,12 @@
                 
                 const lastTx = txs[txs.length - 1];
                 const firstTx = txs[0];
-                
-                console.log(tokenAddress, lastTx)
+            
 
                 let first_sell_all_time = 0;
                 let last_tx_time = firstTx.timestamp
                 let first_tx_time = lastTx.timestamp
                 let first_buy_mc = lastTx.price_usd * lastTx.token.total_supply / 1000;
-                // console.log("Last tx info:", lastTx)
                 let first_buy_amount = Number(lastTx.quote_amount);
                 if (lastTx.quote_token.name == "Tether USD") {
                     first_buy_amount = first_buy_amount / 1200
@@ -751,8 +746,6 @@
 
                 const migration_info_data = await migration_info.json();
 
-                console.log("Migration info data:", tokenAddress, migration_info_data)
-                
                 let migration_block_time = 0;
                 let ath_hold_block_time = 0;
                 let ath_4h_block_time = 0;
@@ -760,11 +753,9 @@
                 let dev = false;
                 let dev_address = "";
                 for (let pool of migration_info_data.data) {
-                    console.log("Data:", tokenAddress, pool)
                     if (created_block_time == 0 && pool?.creation_timestamp > 0) {
                         created_block_time = pool?.creation_timestamp
                     }
-                    console.log("Pool check:", tokenAddress, created_block_time)
                     if (created_block_time == 0 || pool.pool.creation_timestamp > 0 && pool.pool.creation_timestamp < created_block_time) {
                         created_block_time = pool.pool.creation_timestamp
                     }
@@ -817,17 +808,13 @@
 
                 try {
                     let dev_transactions = [];
-                    console.log("Dev addr:", tokenAddress, dev_address)
                     const activites = await fetch(`https://gmgn.ai/vas/api/v1/token_trades/bsc/${tokenAddress}?device_id=${device_id}&fp_did=${fp_did}&client_id=${client_id}&from_app=${from_app}&app_ver=${app_ver}&tz_name=${tz_name}&tz_offset=${tz_offset}&app_lang=${app_lang}&os=web&limit=1&maker=&revert=true`);
 
                     const activitesData = await activites.json();
 
-                    console.log("Activities:", tokenAddress, activitesData)
-
                     dev_transactions = [...dev_transactions, ...activitesData.data.history];
 
                     const dev_txs = dev_transactions
-                    console.log("Dev txs:", tokenAddress, dev_txs)
                     if (dev_txs.length > 0) {
                         const lastDevTx = dev_txs[0];
                         console.log("LastDevTx:", lastDevTx)
@@ -884,7 +871,7 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
 
                 let platform = launchpad_project
 
-                console.log(launchpad_project)
+                console.log("Project:", launchpad_project)
 
                 if (first_tx_time > migration_block_time && migration_block_time > 0) {
                     if (launchpad_project == 'Pump.fun') platform = 'pump-swap'
