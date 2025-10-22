@@ -60,7 +60,8 @@
         'bags': 'https://bags.fm/favicon.ico',
         'heaven': 'https://axiom.trade/images/heaven.svg',
         'fourmeme': 'https://four.meme/_next/static/media/logo.fd63b04b.svg',
-        'flap': 'https://bnb.flap.sh/_next/image?url=%2Flogo.png&w=640&q=75'
+        'flap': 'https://bnb.flap.sh/_next/image?url=%2Flogo.png&w=640&q=75',
+        'bn_fourmeme': 'https://img.icons8.com/?size=100&id=2963&format=png&color=FAB005'
     };
 
     // Wait for the page to load
@@ -72,12 +73,7 @@
 
         wallet = window.location.href.split('/').pop().split('_').pop();
 
-
-
-
         filters = getCurrentFilters();
-
-
 
         // Set configuration from local storage
         initializeConfiguration();
@@ -433,139 +429,62 @@
                 platformMigrationContainer.appendChild(migrationTimeDiv);
             }
 
-            // Create platform image element
-
             if (info.launchpad && platformImages[info.launchpad]) {
-                if (tokenAddress && tokenAddress.startsWith("0x4444")) {
-                    // Create a wrapper div for overlaying icons
-                    const iconWrapper = document.createElement('div');
-                    iconWrapper.style.cssText = `
-                        position: relative;
-                        width: 20px;
-                        height: 20px;
+                const platformImg = document.createElement('img');
+                platformImg.src = platformImages[info.launchpad];
+
+                if (info.launchpad == 'bn_fourmeme') {
+                    console.log("Four.meme BN:", tokenAddress, info.launchpad, platformImages[info.launchpad])
+                }
+                
+                // if (tokenAddress.startsWith("0x4444")) {
+                //     console.log("Global:", tokenAddress, chrome.runtime.getURL("global.png"))
+                //     platformImg.src = chrome.runtime.getURL("global.png");
+                // }
+                platformImg.alt = info.launchpad;
+
+                platformImg.onload = function () {
+                    if (platformImg.naturalWidth > platformImg.naturalHeight) {
+                        platformImg.style.objectPosition = 'left';
+                    }
+                };
+
+                const borderColor = info.migration_block_time > 0 ? 'rgba(255, 230, 9, 0.8)' : 'rgba(255, 255, 255, 0)';
+                const borderWidth = info.migration_block_time > 0 ? '2px' : '0px';
+
+                platformImg.style.cssText = `
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    object-fit: cover;
+                    outline: ${borderWidth} solid ${borderColor};
+                    cursor: pointer;
+                `;
+                platformImg.title = info.launchpad; // Add tooltip
+
+                platformImg.onerror = function () {
+                    // Create fallback platform indicator
+                    const fallbackDiv = document.createElement('div');
+                    fallbackDiv.textContent = info.platform.substring(0, 2).toUpperCase();
+                    fallbackDiv.style.cssText = `
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 2px;                        
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                    `;
-
-                    // Main launchpad image (the green hand or whatever is in platformImages)
-                    const platformImg = document.createElement('img');
-                    platformImg.src = platformImages[info.launchpad];
-                    platformImg.alt = info.launchpad;
-                    platformImg.style.cssText = `
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 5px;
-                        object-fit: cover;
-                        display: block;
-                        outline: ${info.migration_block_time > 0 ? '2px' : '0px'} solid ${info.migration_block_time > 0 ? 'rgba(255, 230, 9, 0.8)' : 'rgba(255,255,255,0)'};
+                        font-size: 8px;
+                        color: white;
+                        font-weight: bold;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
                         cursor: pointer;
                     `;
+                    fallbackDiv.title = info.platform; // Add tooltip
+                    platformMigrationContainer.replaceChild(fallbackDiv, platformImg);
+                    
+                };
 
-                    platformImg.title = info.launchpad;
-
-                    platformImg.onload = function () {
-                        if (platformImg.naturalWidth > platformImg.naturalHeight) {
-                            platformImg.style.objectPosition = 'left';
-                        }
-                    };
-
-                    platformImg.onerror = function () {
-                        // Fallback platform indicator
-                        const fallbackDiv = document.createElement('div');
-                        fallbackDiv.textContent = info.platform.substring(0, 2).toUpperCase();
-                        fallbackDiv.style.cssText = `
-                            width: 16px;
-                            height: 16px;
-                            border-radius: 2px;                        
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 8px;
-                            color: white;
-                            font-weight: bold;
-                            border: 1px solid rgba(255, 255, 255, 0.2);
-                            cursor: pointer;
-                            background: #0c0c0c;
-                        `;
-                        fallbackDiv.title = info.platform; // Tooltip
-                        iconWrapper.replaceChild(fallbackDiv, platformImg);
-                    };
-
-                    iconWrapper.appendChild(platformImg);
-
-                    // Create Binance icon overlay (SVG, centered and HIGHER visibility)
-                    const binanceIcon = document.createElement('img');
-                    binanceIcon.src = 'https://upload.wikimedia.org/wikipedia/commons/e/e8/Binance_Logo.svg'; // Use crisp PNG logo
-                    binanceIcon.alt = 'Binance';
-                    binanceIcon.style.cssText = `
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 14px;
-                        height: 14px;
-                        pointer-events: none;
-                        z-index: 3;
-                        opacity: 0.98;
-                        background: white;
-                        border-radius: 50%;
-                        box-shadow: 0 0 1px 0 rgba(0,0,0,0.05);
-                        padding: 2px;
-                    `;
-
-                    binanceIcon.title = "Binance";
-                    iconWrapper.appendChild(binanceIcon);
-
-                    platformMigrationContainer.appendChild(iconWrapper);
-                } else {
-                    const platformImg = document.createElement('img');
-                    platformImg.src = platformImages[info.launchpad];
-                    platformImg.alt = info.launchpad;
-
-                    platformImg.onload = function () {
-                        if (platformImg.naturalWidth > platformImg.naturalHeight) {
-                            platformImg.style.objectPosition = 'left';
-                        }
-                    };
-
-                    const borderColor = info.migration_block_time > 0 ? 'rgba(255, 230, 9, 0.8)' : 'rgba(255, 255, 255, 0)';
-                    const borderWidth = info.migration_block_time > 0 ? '2px' : '0px';
-
-                    platformImg.style.cssText = `
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 5px;
-                        object-fit: cover;
-                        outline: ${borderWidth} solid ${borderColor};
-                        cursor: pointer;
-                    `;
-                    platformImg.title = info.launchpad; // Add tooltip
-
-                    platformImg.onerror = function () {
-                        // Create fallback platform indicator
-                        const fallbackDiv = document.createElement('div');
-                        fallbackDiv.textContent = info.platform.substring(0, 2).toUpperCase();
-                        fallbackDiv.style.cssText = `
-                            width: 16px;
-                            height: 16px;
-                            border-radius: 2px;                        
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 8px;
-                            color: white;
-                            font-weight: bold;
-                            border: 1px solid rgba(255, 255, 255, 0.2);
-                            cursor: pointer;
-                        `;
-                        fallbackDiv.title = info.platform; // Add tooltip
-                        platformMigrationContainer.replaceChild(fallbackDiv, platformImg);
-                        
-                    };
-
-                    platformMigrationContainer.appendChild(platformImg);
-                }
+                platformMigrationContainer.appendChild(platformImg);
             }
 
             // Add the platform and migration container to the main container
@@ -817,7 +736,6 @@
                     const dev_txs = dev_transactions
                     if (dev_txs.length > 0) {
                         const lastDevTx = dev_txs[0];
-                        console.log("LastDevTx:", lastDevTx)
                         if (created_block_time == 0) {
                             created_block_time = lastDevTx.timestamp
                         } else if (created_block_time > lastDevTx.timestamp) {
@@ -871,7 +789,7 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
 
                 let platform = launchpad_project
 
-                console.log("Project:", launchpad_project)
+                console.log("Project:", tokenAddress, "Project:", launchpad_project)
 
                 if (first_tx_time > migration_block_time && migration_block_time > 0) {
                     if (launchpad_project == 'Pump.fun') platform = 'pump-swap'
