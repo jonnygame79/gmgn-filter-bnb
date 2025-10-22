@@ -797,11 +797,12 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
                     if (launchpad_project == 'ray_launchpad')
                         platform = "cpmm"
                     if (launchpad_project == 'heaven') platform = "heaven-swap"
-                    if (launchpad_project = 'fourmeme') platform = "pancake"
-                    if (launchpad_project = 'flap') platform = "pancake"
+                    if (launchpad_project == 'fourmeme') platform = "pancake"
+                    if (launchpad_project == 'flap') platform = "pancake"
+                } else {
+                    if (launchpad == 'bn_fourmeme') platform = "bn_fourmeme"
                 }
-
-
+                
                 tokenInfo[tokenAddress] = {
                     dev,
                     launchpad,
@@ -1015,6 +1016,9 @@ https://gmgn.ai/api/v1/token_mcap_candles/bsc/${tokenAddress}?device_id=${device
                         </label>
                         <div class="gmgn-filter-checkboxes">
                             <label><input launchpad type="checkbox" value="fourmeme">Four.meme</label>                            
+                        </div>
+                        <div class="gmgn-filter-checkboxes">
+                            <label><input launchpad type="checkbox" value="bn_fourmeme">Binance Exclusive</label>                            
                         </div>
                         <div class="gmgn-filter-checkboxes">
                             <label><input launchpad type="checkbox" value="flap">Flap</label>                            
