@@ -576,7 +576,7 @@
 
                 let cursor = ""
                 while (1) {
-                    const activites = await fetch(`https://gmgn.ai/api/v1/wallet_activity/bsc?type=buy&type=sell&device_id=${device_id}&client_id=${client_id}&from_app=${from_app}&app_ver=${app_ver}&tz_name=${tz_name}&tz_offset=${tz_offset}&app_lang=${app_lang}&fp_did=${fp_did}&os=${os}&wallet=${wallet}&token=${tokenAddress}&limit=50&cursor=${cursor}`);
+                    const activites = await fetch(`https://gmgn.ai/api/v1/wallet_activity/bsc?type=buy&type=sell&device_id=${device_id}&client_id=${client_id}&from_app=${from_app}&app_ver=${app_ver}&tz_name=${tz_name}&tz_offset=${tz_offset}&app_lang=${app_lang}&fp_did=${fp_did}&os=${os}&wallet=${wallet.toLowerCase()}&token=${tokenAddress.toLowerCase()}&limit=50&cursor=${cursor}`);
 
                     const activitesData = await activites.json();
 
